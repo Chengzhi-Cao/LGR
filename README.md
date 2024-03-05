@@ -94,7 +94,7 @@ You can train the goal prediction model as follows:
 python model.py
 ```
 
-The code of our algorithm will come soon.
+We will release the TOM algorithm proposed in this paper soon.
 
 
 ## Visualization
