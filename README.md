@@ -66,12 +66,46 @@ pip install -r requirements.txt
 ```
 
 ## Dataset
-We include a dataset of environments and activities that agents have to perform in them. During the **Watch** phase and the training of the **Help** phase, we use a dataset of 5 environments. When evaluating the **Help** phase, we use a dataset of 2 held out environments.
 
-The **Watch** phase consists of a set of episodes in 5 environments showing Alice performing the task. These episodes were generated using a planner, and they can be downloaded [here](http://virtual-home.org/release/watch_and_help/watch_data.zip). The training and testing split information can be found in `datasets/watch_scenes_split.json`. 
+We can download *train* and *test* datasets used in [google drive](https://drive.google.com/drive/folders/12QWa6cQKlC6SksU9uj7HCSVr4V6i6n86?usp=drive_link).
 
-The **Help** phase, contains a set of environments and tasks definitions. You can find the *train* and *test* datasets used in `dataset/train_env_set_help.pik` and `dataset/test_env_set_help.pik`. Note that the *train* environments are independent, whereas the *test* environments match the tasks in the **Watch** test split.
+### Create your own dataset 
+You can also create your dataset, and modify it to incorporate new tasks. For that, run
 
+```bash
+python gen_data/vh_init.py --num-per-apartment {NUM_APT} --task {TASK_NAME}
+```
+Where `NUM_APT` corresponds to the number of episodes you want for each apartment and task and `TASK_NAME` corresponds to the task name you want to generate, which can be `setup_table`, `clean_table`, `put_fridge`, `prepare_food`, `read_book`, `watch_tv` or `all` to generate all the tasks.
+
+After creating your dataset, you can create the data for the **Watch** phase running the *Alice alone* baseline (see [Evaluate Baselines](#evaluate-baselines)).
+
+You can then generate a dataset of tasks in a new environment where the tasks match those of the **Watch phase**. We do that in our work to make sure that the environment in the **Watch** phase is different than that in the **Help Phase** while having the same task specification. You can do that by running:
+
+```bash
+python gen_data/vh_init_gen_test.py
+```
+
+It will use the tasks from the test split of the **Watch** phase to create a **Help** dataset.
+
+
+
+## Training
+First, download the dataset for the **Watch** phase and put it under `dataset`. 
+You can train the goal prediction model for the **Watch** phase as follows:
+
+```bash
+sh scripts/train_watch.sh
+```
+
+To test the goal prediction model, run:
+
+```bash
+sh scripts/test_watch.sh
+```
+
+
+### Evaluate baselines
+Below is the code to evaluate the different planning-based models. The results will be saved in a folder called `test_results`. Make sure you create it first, one level above this repository. 
 
 
 ## Visualization
