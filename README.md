@@ -4,7 +4,7 @@
 <!-- <img src= "https://github.com/Chengzhi-Cao/LGR/blob/main/pic/network.jpg" width="120%"> -->
 <img src= "pic/network.jpg" width="120%">
 
-This repository provides the official PyTorch implementation of the following paper:
+This repository provides the implementation of the following paper:
 
 > Enhancing Human-AI Collaboration Through Logic-Guided Reasoning
 >
@@ -20,18 +20,57 @@ This repository provides the official PyTorch implementation of the following pa
 
 
 ## Dependencies
-- Python
-- Pytorch (1.4)
-- scikit-image
-- opencv-python
+
+- dgl==0.5.2
+- gym==0.17.3
+- hiredis==1.1.0
+- idna==2.8
+- importlib-metadata==2.0.0
+- ipdb==0.13.4
+- ipython==7.18.1
+- matplotlib==3.3.2
+- numpy
+- opencv-python==4.0.0.21
+- Pillow
+- PyYAML>=5.4
+- ray==1.0.0
+- scipy==1.5.2
+- torch==1.6.0
+- torchvision==0.7.0
+- tqdm==4.31.1
 
 
+
+
+
+## Setup
+Clone the [VirtualHome API](https://github.com/xavierpuigf/virtualhome.git) repository one folder above this repository
+
+```bash
+cd ..
+git clone --branch wah https://github.com/xavierpuigf/virtualhome.git
+cd virtualhome
+pip install -r requirements.txt
+```
+
+Download the simulator, and put it in an `executable` folder, one folder above this repository
+
+
+- [Download](http://virtual-home.org/release/simulator/v2.0/linux_exec.zip) Linux x86-64 version.
+- [Download](http://virtual-home.org/release/simulator/v2.0/macos_exec.zip) Mac OS X version.
+- [Download](http://virtual-home.org/release/simulator/v2.0/windows_exec.zip) Windows version.
+
+### Install Requirements
+```bash
+pip install -r requirements.txt
+```
 
 ## Dataset
+We include a dataset of environments and activities that agents have to perform in them. During the **Watch** phase and the training of the **Help** phase, we use a dataset of 5 environments. When evaluating the **Help** phase, we use a dataset of 2 held out environments.
 
-- Download deblur dataset from the [GoPro dataset](https://seungjunnah.github.io/Datasets/gopro.html) .
+The **Watch** phase consists of a set of episodes in 5 environments showing Alice performing the task. These episodes were generated using a planner, and they can be downloaded [here](http://virtual-home.org/release/watch_and_help/watch_data.zip). The training and testing split information can be found in `datasets/watch_scenes_split.json`. 
 
-- Unzip files ```dataset``` folder.
+The **Help** phase, contains a set of environments and tasks definitions. You can find the *train* and *test* datasets used in `dataset/train_env_set_help.pik` and `dataset/test_env_set_help.pik`. Note that the *train* environments are independent, whereas the *test* environments match the tasks in the **Watch** test split.
 
 
 
