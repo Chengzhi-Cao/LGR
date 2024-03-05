@@ -74,6 +74,11 @@ The **Help** phase, contains a set of environments and tasks definitions. You ca
 
 
 
+## Visualization
+
+<img src= "pic/visual.jpg" width="120%">
+
+
 ## Contact
 Should you have any question, please contact chengzhicao@mail.ustc.edu.cn.
 
