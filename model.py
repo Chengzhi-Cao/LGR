@@ -214,9 +214,9 @@ def main():
     
     print(args)
 
-    from predicate.demo_dataset_graph import get_dataset
-    from predicate.demo_dataset_graph import collate_fn
-    from predicate.demo_dataset_graph import to_cuda_fn
+    from predicate.demo import get_dataset
+    from predicate.demo import collate_fn
+    from predicate.demo import to_cuda_fn
     train_dset, test_dset, new_test_dset = get_dataset(args, train=True)
 
 

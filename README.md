@@ -8,7 +8,7 @@ This repository provides the implementation of the following paper:
 
 > Enhancing Human-AI Collaboration Through Logic-Guided Reasoning
 >
-> Chengzhi Cao, Yinghao Fu*, Sheng Xu, Ruimao Zhang, Shuang Li
+> Chengzhi Cao, Yinghao Fu, Sheng Xu, Ruimao Zhang, Shuang Li*
 >
 > International Conference on Learning Representations
 >
