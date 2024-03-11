@@ -86,15 +86,6 @@ python gen_data/logic.py
 dataset_id denotes the index of dataset. You can design specific predicates and relation types based on the dataset you are using.
 
 
-## Training
-
-You can train the goal prediction model as follows:
-
-```bash
-python model.py
-```
-
-We will release the TOM algorithm proposed in this paper soon.
 
 
 ## Visualization
