@@ -38,7 +38,7 @@ Then put this code under the folder "/baseline_models/LGR".
 
 ## Dataset
 
-We can download *train* and *test* datasets used in from This [link](https://drive.google.com/file/d/1QoCL5veGnuJNhK1mMDryCrvpwVXTupdI/view), and place the zipped file at ./datasets/v1.
+We can download *train* and *test* datasets used in from This [link](https://drive.google.com/file/d/1QoCL5veGnuJNhK1mMDryCrvpwVXTupdI/view), and place the zipped file at /datasets.
 
 
 ### Logic base
@@ -64,7 +64,7 @@ python scripts/eval_rl.py --model LGR --observability fully --level level1
 Should you have any question, please contact chengzhicao@mail.ustc.edu.cn.
 
 ## Notes and references
-The code is based on HandMeThat dataset(https://github.com/Simon-Wan/HandMeThat)
+The code is based on [HandMeThat dataset](https://github.com/Simon-Wan/HandMeThat)
 
 [1] [Li S, Feng M, Wang L, et al. Explaining point processes by learning interpretable temporal logic rules[C]//International Conference on Learning Representations. 2021.](https://openreview.net/pdf?id=P07dq7iSAGr) <br />
 [2] [Li S, Wang L, Zhang R, et al. Temporal logic point processes[C]//International Conference on Machine Learning. PMLR, 2020: 5990-6000.](https://proceedings.mlr.press/v119/li20p/li20p.pdf) <br />
