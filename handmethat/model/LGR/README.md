@@ -26,12 +26,17 @@
 
 
 ## Setup
-Clone the [HandMeThat](https://github.com/Simon-Wan/HandMeThat) repository one folder above this repository
+Clone the [HandMeThat](https://github.com/Simon-Wan/HandMeThat) repository 
 
+Clone the third party repositories (XTX, ALFWorld):
+```
+git clone https://github.com/princeton-nlp/XTX.git
+git clone https://github.com/alfworld/alfworld.git
+```
+Then put this code under the folder "/baseline_models/LGR".
 
 
 ## Dataset
-
 
 We can download *train* and *test* datasets used in from This [link](https://drive.google.com/file/d/1QoCL5veGnuJNhK1mMDryCrvpwVXTupdI/view), and place the zipped file at ./datasets/v1.
 
@@ -43,6 +48,17 @@ We follow [Logic_Point_Processes](https://github.com/FengMingquan-sjtu/Logic_Poi
 You can use deep-learning based algorithms to encode this logic rules as latent variable to guide the training process of your own models.
 
 
+To train the model:
+
+```
+python scripts/train_rl.py --model LGR --observability fully
+```
+
+To evaluate the model (e.g., validate) on specific hardness level (e.g., level1):
+
+```
+python scripts/eval_rl.py --model LGR --observability fully --level level1 
+```
 
 ## Contact
 Should you have any question, please contact chengzhicao@mail.ustc.edu.cn.
