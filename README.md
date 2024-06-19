@@ -1,20 +1,6 @@
 # LGR
 
-<!-- <img src= "https://github.com/Chengzhi-Cao/STRA/blob/main/network.jpg" width="120%"> -->
-<!-- <img src= "https://github.com/Chengzhi-Cao/LGR/blob/main/pic/network.jpg" width="120%"> -->
-<img src= "pic/network.jpg" width="120%">
 
-This repository provides the implementation of the following paper:
-
-> Enhancing Human-AI Collaboration Through Logic-Guided Reasoning
->
-> Chengzhi Cao, Yinghao Fu, Sheng Xu, Ruimao Zhang, Shuang Li*
->
-> International Conference on Learning Representations
->
-> Paper Link:
->
-> We present a systematic framework designed to enhance human-robot perception and collaboration through the integration of logical rules and Theory of Mind (ToM). Logical rules provide interpretable predictions and generalize well across diverse tasks, making them valuable for learning and decision-making. Leveraging the ToM for understanding others' mental states, our approach facilitates effective collaboration. In this paper, we employ logic rules derived from observational data to infer human goals and guide human-like agents. These rules are treated as latent variables, and a rule encoder is trained alongside a multi-agent system in the robot's mind. We assess the posterior distribution of latent rules using learned embeddings, representing entities and relations. Confidence scores for each rule indicate their consistency with observed data. Then, we employ a hierarchical reinforcement learning model with ToM to plan robot actions for assisting humans. Extensive experiments validate each component of our framework, and results on multiple benchmarks demonstrate that our model outperforms the majority of existing approaches.
 
 
 
@@ -88,9 +74,9 @@ dataset_id denotes the index of dataset. You can design specific predicates and 
 
 
 
-## Visualization
+<!-- ## Visualization
 
-<img src= "pic/visual.jpg" width="120%">
+<img src= "pic/visual.jpg" width="120%"> -->
 
 
 ## Contact
