@@ -45,7 +45,7 @@ We can download *train* and *test* datasets used in from This [link](https://dri
 
 We follow [Logic_Point_Processes](https://github.com/FengMingquan-sjtu/Logic_Point_Processes_ICLR) to prepare the data. The logic rules contain temporal relations and spatial relations. We put the demo of logic rules in [baidu drive](https://pan.baidu.com/s/1x-_WDYPrI_WwCMKg6NherA), password:5de0. Dataset_id denotes the index of logic rules. You can design specific predicates and relation types based on the dataset you are using.
 
-You can use deep-learning based algorithms to encode this logic rules as latent variable to guide the training process of your own models.
+You can use deep-learning based algorithms to encode this logic rules as latent variable to guide the training process of your own models. We provide one pretrained model to process logic predicates (https://pan.baidu.com/s/1bR3S1tkw1Hu9jozOcGJ7CA password：1z79)
 
 
 To train the model:
